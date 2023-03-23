@@ -1,0 +1,34 @@
+
+
+
+<p> Listado de Heroes tema 47 </p>
+
+
+
+    <div *ngIf="heroesBorrados; else noBrorrado">
+            <h3>CAJA RECUPERADOS:<small>{{heroesBorrados}}</small></h3>
+
+    </div>
+
+    <ng-template #noBrorrado>
+        <h3> No se a Borrado Nada.</h3>
+    </ng-template>
+    
+
+    
+    <button (click)="deleteItem()">
+        borrarItem
+    </button>
+    
+    
+<ul>
+    <li *ngFor="let item of items; let i = index">
+       {{i}} .- {{item}}
+    </li>
+</ul>
+
+
+
+
+
+
